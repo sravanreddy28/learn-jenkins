@@ -17,8 +17,12 @@ pipeline {
         stage('code quality') {
                   steps {
                     echo 'Hello World'
-                    error 'error signal'
                   }
                 }
+                stage('code security') {
+                                  steps {
+                                    echo 'Hello World'
+                                  }
+                                }
   }
 }
