@@ -1,27 +1,16 @@
-stages {
-stage('compile') {
-            steps {
-                echo 'Hello World'
-            }
+pipeline {
+  //agent any
+  agent { node { label 'workstation' } }
+
+  stages {
+
+    stage('Compile') {
+      steps {
+        echo 'Hello World'
+        error 'This is an error'
+        error 'This is an error'
+      }
+    }
+
+  }
 }
-stage('build') {
-            steps {
-                echo 'Hello World'
-            }
-            }
-            stage('code test') {
-                        steps {
-                            echo 'Hello World'
-                        }
-                        }
-                        stage('code quality') {
-                                    steps {
-                                        echo 'Hello World'
-                                    }
-                                    }
-                                    stage('app deploy') {
-                                                steps {
-                                                    echo 'Hello World'
-                                                }
-                                                }
-                                                }
