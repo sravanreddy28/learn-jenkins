@@ -12,9 +12,13 @@ pipeline {
     stage('test') {
           steps {
             echo 'Hello World'
-            error 'This is an error'
           }
         }
-
+        stage('code quality') {
+                  steps {
+                    echo 'Hello World'
+                    error 'error signal'
+                  }
+                }
   }
 }
